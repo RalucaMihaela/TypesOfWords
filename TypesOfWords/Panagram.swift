@@ -15,19 +15,18 @@ class Panagram {
     var palindrome: Palindrome = Palindrome()
     
     func staticMode() {
-        let argCount = CommandLine.argc
         let argument = CommandLine.arguments[1]
         let (option, value) = getOption(argument.substring(from: argument.index(argument.startIndex, offsetBy: 1)))
         
         switch option {
         case .anagram:
-            anagram.showOutput(argCount: argCount, first: CommandLine.arguments[2], second: CommandLine.arguments[3])
+            anagram.showOutput(firstWord: CommandLine.arguments[2], secondWord: CommandLine.arguments[3])
         case .palindrome:
-            palindrome.showOutput(argCount: argCount, first: CommandLine.arguments[2])
+            palindrome.showOutput(word: CommandLine.arguments[2])
         case .help:
             consoleIO.printUsage()
         case .unknown, .quit:
-            consoleIO.getOutput(message: Error.unknown.rawValue)
+            consoleIO.getOutput(message: Messages.unknown.rawValue)
             consoleIO.printUsage()
         }
     }
@@ -36,27 +35,27 @@ class Panagram {
         var shouldQuit = false
         while !shouldQuit {
             
-            consoleIO.getOutput(message: Error.help.rawValue)
+            consoleIO.getOutput(message: Messages.help.rawValue)
             let (option, value) = getOption(consoleIO.getInput())
             
             switch option {
             case .anagram:
-                consoleIO.getOutput(message: Error.typeFirst.rawValue)
+                consoleIO.getOutput(message: Messages.typeFirst.rawValue)
                 let first = consoleIO.getInput()
-                consoleIO.getOutput(message: Error.typeSecond.rawValue)
+                consoleIO.getOutput(message: Messages.typeSecond.rawValue)
                 let second = consoleIO.getInput()
                 
-                anagram.showOutput(argCount: 4, first: first, second: second)
+                anagram.showOutput(firstWord: first, secondWord: second)
                 
             case .palindrome:
-                consoleIO.getOutput(message:Error.typeFirstPalindrome.rawValue)
+                consoleIO.getOutput(message:Messages.typeFirstPalindrome.rawValue)
                 if consoleIO.getInput().count > 0{
-                    palindrome.showOutput(argCount: 3, first: consoleIO.getInput())
+                    palindrome.showOutput(word: consoleIO.getInput())
                 }
             case .quit:
                 shouldQuit = true
             default:
-                consoleIO.getOutput(message: Error.unknown.rawValue)
+                consoleIO.getOutput(message: Messages.unknown.rawValue)
             }
         }
     }

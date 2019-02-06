@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		17FC6BFE220252C2004BB0F1 /* Anagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6BFD220252C2004BB0F1 /* Anagram.swift */; };
 		17FC6C00220252D0004BB0F1 /* Palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6BFF220252D0004BB0F1 /* Palindrome.swift */; };
-		17FC6C0422025B98004BB0F1 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6C0322025B98004BB0F1 /* Error.swift */; };
+		17FC6C0422025B98004BB0F1 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6C0322025B98004BB0F1 /* Messages.swift */; };
 		17FC6C06220262D9004BB0F1 /* OptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6C05220262D9004BB0F1 /* OptionType.swift */; };
 		17FE67F421EE925200285F85 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE67F321EE925200285F85 /* main.swift */; };
 		17FE67FB21EE947B00285F85 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE67FA21EE947B00285F85 /* ConsoleIO.swift */; };
@@ -32,7 +32,7 @@
 /* Begin PBXFileReference section */
 		17FC6BFD220252C2004BB0F1 /* Anagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anagram.swift; sourceTree = "<group>"; };
 		17FC6BFF220252D0004BB0F1 /* Palindrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palindrome.swift; sourceTree = "<group>"; };
-		17FC6C0322025B98004BB0F1 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		17FC6C0322025B98004BB0F1 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		17FC6C05220262D9004BB0F1 /* OptionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionType.swift; sourceTree = "<group>"; };
 		17FE67F021EE925200285F85 /* TypesOfWords */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TypesOfWords; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FE67F321EE925200285F85 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				17FE67FA21EE947B00285F85 /* ConsoleIO.swift */,
-				17FC6C0322025B98004BB0F1 /* Error.swift */,
+				17FC6C0322025B98004BB0F1 /* Messages.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 				17FE67F421EE925200285F85 /* main.swift in Sources */,
 				17FE67FB21EE947B00285F85 /* ConsoleIO.swift in Sources */,
 				17FC6C00220252D0004BB0F1 /* Palindrome.swift in Sources */,
-				17FC6C0422025B98004BB0F1 /* Error.swift in Sources */,
+				17FC6C0422025B98004BB0F1 /* Messages.swift in Sources */,
 				17FC6C06220262D9004BB0F1 /* OptionType.swift in Sources */,
 				17FE67FD21EE954600285F85 /* Panagram.swift in Sources */,
 			);

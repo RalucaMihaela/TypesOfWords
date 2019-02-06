@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Error: String {
+enum Messages: String {
     case isAnagram = "Is anagram"
     case isNotAnagram = "Is not anagram"
     case globalError = "Arguments are not correct"

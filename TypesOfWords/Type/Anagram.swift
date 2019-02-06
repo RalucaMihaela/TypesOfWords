@@ -11,21 +11,22 @@ import Foundation
 class Anagram {
     
     let consoleIO = ConsoleIO()
+    private let numberOfArguments = 4
     
-    func wordVerify(word: Int32) -> Bool {
-        return word == 4 ? true : false
+    func wordVerify(word: Int) -> Bool {
+        return word == numberOfArguments ? true : false
     }
     
-    func parse(first: String, second: String) -> Bool{
-        return first.isAnagramOf(second) ? true : false
+    func parse(firstWord: String, secondWord: String) -> Bool{
+        return firstWord.isAnagramOf(secondWord) ? true : false
     }
     
-    func showOutput(argCount: Int32, first: String, second: String) {
-        let anagramVerify = wordVerify(word: argCount)
+    func showOutput(firstWord: String, secondWord: String) {
+        let anagramVerify = wordVerify(word: numberOfArguments)
         if anagramVerify == true {
-            parse(first: CommandLine.arguments[2], second: CommandLine.arguments[3]) ? consoleIO.getOutput(message: Error.isAnagram.rawValue) :  consoleIO.getOutput(message: Error.isNotAnagram.rawValue)
+            parse(firstWord: firstWord, secondWord: secondWord) ? consoleIO.getOutput(message: Messages.isAnagram.rawValue) :  consoleIO.getOutput(message: Messages.isNotAnagram.rawValue)
         } else {
-            consoleIO.getOutput(message: Error.globalError.rawValue)
+            consoleIO.getOutput(message: Messages.globalError.rawValue)
             consoleIO.printUsage()
         }
     }

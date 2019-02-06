@@ -10,21 +10,22 @@ import Foundation
 
 class Palindrome {
     let consoleIO = ConsoleIO()
+    private let numberOfArguments = 3
     
-    func wordVerify(word: Int32) -> Bool {
-        return word == 3 ? true : false
+    func wordVerify(word: Int) -> Bool {
+        return word == numberOfArguments ? true : false
     }
     
-    func parse(first: String) -> Bool {
-        return first.isPalindrome() ? true : false
+    func parse(word: String) -> Bool {
+        return word.isPalindrome() ? true : false
     }
     
-    func showOutput(argCount: Int32, first: String) {
-        let palindromeVerify = wordVerify(word: argCount)
+    func showOutput(word: String) {
+        let palindromeVerify = wordVerify(word: numberOfArguments)
         if palindromeVerify == true {
-            parse(first: CommandLine.arguments[2]) ? consoleIO.getOutput(message:Error.isPalindrome.rawValue) :   consoleIO.getOutput(message:Error.isNotPalindrome.rawValue)
+            parse(word: word) ? consoleIO.getOutput(message:Messages.isPalindrome.rawValue) :   consoleIO.getOutput(message:Messages.isNotPalindrome.rawValue)
         } else {
-            consoleIO.getOutput(message: Error.globalError.rawValue)
+            consoleIO.getOutput(message: Messages.globalError.rawValue)
             consoleIO.printUsage()
         }
     }
