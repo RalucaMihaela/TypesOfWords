@@ -10,7 +10,7 @@ import Foundation
 
 class Panagram {
     
-    private let consoleIO = ConsoleIO()
+    private let read = Read()
     private var anagram: Anagram = Anagram()
     private var palindrome: Palindrome = Palindrome()
     private let numberOfArguments: Int = 2
@@ -28,54 +28,49 @@ class Panagram {
     }
     
     func staticMode() {
-        let argument = CommandLine.arguments[1]
-        let firstWord = CommandLine.arguments[2]
-        let index = argument.index(argument.startIndex, offsetBy: 1)
-        let (option, _) = getOption(String(argument.suffix(from: index)))
-        
-        switch option {
-        case .anagram:
-            let secondWord = CommandLine.arguments[3]
-            anagram.showOutput(firstWord: firstWord, secondWord: secondWord)
-        case .palindrome:
-            palindrome.showOutput(word: firstWord)
-        case .help:
-            consoleIO.printUsage()
-        case .unknown, .quit:
-            consoleIO.getOutput(message: Messages.unknown.rawValue)
-            consoleIO.printUsage()
-        }
+//        let argument = CommandLine.arguments[1]
+//        let firstWord = CommandLine.arguments[2]
+//        let index = argument.index(argument.startIndex, offsetBy: 1)
+//        let (option, _) = getOption(String(argument.suffix(from: index)))
+//
+//        switch option {
+//        case .anagram:
+//            let secondWord = CommandLine.arguments[3]
+//            anagram.showOutput(firstWord: firstWord, secondWord: secondWord)
+//        case .palindrome:
+//            palindrome.showOutput(word: firstWord)
+//        case .help:
+//            consoleIO.printUsage()
+//        case .unknown, .quit:
+//            consoleIO.getOutput(message: Messages.unknown.rawValue)
+//            consoleIO.printUsage()
+//        }
     }
     
     func interactiveMode() {
         var shouldQuit = false
+        var itemRead: (type: OptionType, firstWord: String, secondWord: String)
+        
         while !shouldQuit {
-            consoleIO.getOutput(message: Messages.help.rawValue)
-            let (option, _) = getOption(consoleIO.getInput())
-            
-            switch option {
+            itemRead = read.readInteractive()
+            switch itemRead.type {
             case .anagram:
-                consoleIO.getOutput(message: Messages.typeFirst.rawValue)
-                let first = consoleIO.getInput()
-                consoleIO.getOutput(message: Messages.typeSecond.rawValue)
-                let second = consoleIO.getInput()
-                
-                anagram.showOutput(firstWord: first, secondWord: second)
+                anagram.showOutput(firstWord: "bla", secondWord: "bla")
             case .palindrome:
-                consoleIO.getOutput(message:Messages.typeFirstPalindrome.rawValue)
-                if consoleIO.getInput().count > 0{
-                    palindrome.showOutput(word: consoleIO.getInput())
-                }
+//                consoleIO.getOutput(message:Messages.typeFirstPalindrome.rawValue)
+//                if consoleIO.getInput().count > 0{
+//                    palindrome.showOutput(word: consoleIO.getInput())
+//                }
+                print("bla")
             case .quit:
                 shouldQuit = true
             default:
-                consoleIO.getOutput(message: Messages.unknown.rawValue)
+                shouldQuit = true
+//                consoleIO.getOutput(message: Messages.unknown.rawValue)
             }
         }
     }
    
-    func getOption(_ option: String) -> (option:OptionType, value: String) {
-        return (OptionType(value: option), option)
-    }
+   
 }
 
