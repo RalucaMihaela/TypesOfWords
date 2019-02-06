@@ -67,7 +67,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "palindrom"
+            argument = "ana"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

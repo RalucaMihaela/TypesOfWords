@@ -10,18 +10,32 @@ import Foundation
 
 class Panagram {
     
-    let consoleIO = ConsoleIO()
-    var anagram: Anagram = Anagram()
-    var palindrome: Palindrome = Palindrome()
+    private let consoleIO = ConsoleIO()
+    private var anagram: Anagram = Anagram()
+    private var palindrome: Palindrome = Palindrome()
+    private let numberOfArguments: Int = 2
+    
+    func isInteractive() -> Bool {
+        return CommandLine.argc < numberOfArguments ? true : false
+    }
+    
+    func start() {
+        if isInteractive() {
+            self.interactiveMode()
+        } else {
+            self.staticMode()
+        }
+    }
     
     func staticMode() {
         let argument = CommandLine.arguments[1]
         let firstWord = CommandLine.arguments[2]
-        let secondWord = CommandLine.arguments[3]
-        let (option, _) = getOption(argument.substring(from: argument.index(argument.startIndex, offsetBy: 1)))
+        let index = argument.index(argument.startIndex, offsetBy: 1)
+        let (option, _) = getOption(String(argument.suffix(from: index)))
         
         switch option {
         case .anagram:
+            let secondWord = CommandLine.arguments[3]
             anagram.showOutput(firstWord: firstWord, secondWord: secondWord)
         case .palindrome:
             palindrome.showOutput(word: firstWord)
