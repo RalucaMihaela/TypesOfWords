@@ -9,24 +9,8 @@
 import Foundation
 
 class Palindrome {
-    let consoleIO = ConsoleIO()
-    private let numberOfArguments = 3
     
-    func wordVerify(word: Int) -> Bool {
-        return word == numberOfArguments ? true : false
-    }
-    
-    func parse(word: String) -> Bool {
-        return word.isPalindrome() ? true : false
-    }
-    
-    func showOutput(word: String) {
-        let palindromeVerify = wordVerify(word: numberOfArguments)
-        if palindromeVerify == true {
-            parse(word: word) ? consoleIO.getOutput(message:Messages.isPalindrome.rawValue) :   consoleIO.getOutput(message:Messages.isNotPalindrome.rawValue)
-        } else {
-            consoleIO.getOutput(message: Messages.globalError.rawValue)
-            consoleIO.printUsage()
-        }
+    func isPalindrome(firstWord: String) -> Bool {
+        return firstWord.isPalindrome() ? true : false
     }
 }

@@ -8,11 +8,15 @@
 
 import Foundation
 
+typealias ItemRead = (type: OptionType, firstWord: String, secondWord: String)
+
 class Panagram {
     
     private let read = Read()
+    private let write = Output()
     private var anagram: Anagram = Anagram()
     private var palindrome: Palindrome = Palindrome()
+    private var wordVerify: WordParse = WordParse()
     private let numberOfArguments: Int = 2
     
     func isInteractive() -> Bool {
@@ -28,6 +32,9 @@ class Panagram {
     }
     
     func staticMode() {
+//        let numberOfArguments = (item.type == .anagram) ? 4 : 3
+//        if wordVerify.wordVerify(word: wordCount, numberOfArguments: numberOfArguments) {
+//        }
 //        let argument = CommandLine.arguments[1]
 //        let firstWord = CommandLine.arguments[2]
 //        let index = argument.index(argument.startIndex, offsetBy: 1)
@@ -48,29 +55,24 @@ class Panagram {
     }
     
     func interactiveMode() {
-        var shouldQuit = false
-        var itemRead: (type: OptionType, firstWord: String, secondWord: String)
+        var item: ItemRead
         
-        while !shouldQuit {
-            itemRead = read.readInteractive()
-            switch itemRead.type {
-            case .anagram:
-                anagram.showOutput(firstWord: "bla", secondWord: "bla")
-            case .palindrome:
-//                consoleIO.getOutput(message:Messages.typeFirstPalindrome.rawValue)
-//                if consoleIO.getInput().count > 0{
-//                    palindrome.showOutput(word: consoleIO.getInput())
-//                }
-                print("bla")
-            case .quit:
-                shouldQuit = true
-            default:
-                shouldQuit = true
-//                consoleIO.getOutput(message: Messages.unknown.rawValue)
-            }
-        }
+        item = read.readInteractive()
+        self.verifyTypeOfWord(wordCount: Int(CommandLine.argc), item: item)
     }
    
+    func verifyTypeOfWord(wordCount: Int, item: ItemRead){
+        var isCorrect: Bool = false
+        switch item.type {
+        case .anagram:
+            isCorrect = anagram.isAnagram(firstWord: item.firstWord, secondWord: item.secondWord)
+        case .palindrome:
+            isCorrect = palindrome.isPalindrome(firstWord: item.firstWord)
+        default:
+            isCorrect = false
+        }
+        write.writeInteractiveWordParse(isCorrect: isCorrect, type: item.type)
+    }
    
 }
 

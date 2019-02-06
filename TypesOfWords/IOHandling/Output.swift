@@ -19,4 +19,19 @@ class Output {
     func writeInteractive(message: Messages){
         consoleIO.getOutput(message: message.rawValue)
     }
+    
+    func writeInteractiveWordParse(isCorrect: Bool, type: OptionType){
+        switch type {
+        case .anagram, .palindrome:
+            if isCorrect {
+                writeInteractive(message: type == .anagram ? .isAnagram : .isPalindrome)
+            } else {
+                writeInteractive(message: type == .anagram ? .isNotAnagram : .isNotPalindrome)
+            }
+        case .help:
+            writeInteractive(message: .help)
+        default:
+            writeInteractive(message: .unknown)
+        }
+    }
 }

@@ -18,17 +18,27 @@ class Read {
     }
     
     func readInteractive() -> (OptionType, String, String) {
+        var firstWord: String = ""
+        var secondWord: String = ""
         
         output.writeInteractive(message: .help)
         let (option, _) = getOption(consoleIO.getInput())
         
-        output.writeInteractive(message: .typeFirst)
-        let first = consoleIO.getInput()
+        switch option {
+        case .anagram:
+            output.writeInteractive(message: .typeFirst)
+            firstWord = consoleIO.getInput()
+            
+            output.writeInteractive(message: .typeSecond)
+            secondWord = consoleIO.getInput()
+        case .palindrome:
+            output.writeInteractive(message: .typeFirst)
+            firstWord = consoleIO.getInput()
+        default:
+            output.writeInteractive(message: .unknown)
+        }
         
-        output.writeInteractive(message: .typeSecond)
-        let second = consoleIO.getInput()
-        
-        return (option,first,second)
+        return (option,firstWord,secondWord)
     }
     
     func getOption(_ option: String) -> (option:OptionType, value: String) {
