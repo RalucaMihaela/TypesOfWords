@@ -16,13 +16,15 @@ class Panagram {
     
     func staticMode() {
         let argument = CommandLine.arguments[1]
-        let (option, value) = getOption(argument.substring(from: argument.index(argument.startIndex, offsetBy: 1)))
+        let firstWord = CommandLine.arguments[2]
+        let secondWord = CommandLine.arguments[3]
+        let (option, _) = getOption(argument.substring(from: argument.index(argument.startIndex, offsetBy: 1)))
         
         switch option {
         case .anagram:
-            anagram.showOutput(firstWord: CommandLine.arguments[2], secondWord: CommandLine.arguments[3])
+            anagram.showOutput(firstWord: firstWord, secondWord: secondWord)
         case .palindrome:
-            palindrome.showOutput(word: CommandLine.arguments[2])
+            palindrome.showOutput(word: firstWord)
         case .help:
             consoleIO.printUsage()
         case .unknown, .quit:
@@ -34,9 +36,8 @@ class Panagram {
     func interactiveMode() {
         var shouldQuit = false
         while !shouldQuit {
-            
             consoleIO.getOutput(message: Messages.help.rawValue)
-            let (option, value) = getOption(consoleIO.getInput())
+            let (option, _) = getOption(consoleIO.getInput())
             
             switch option {
             case .anagram:
@@ -46,7 +47,6 @@ class Panagram {
                 let second = consoleIO.getInput()
                 
                 anagram.showOutput(firstWord: first, secondWord: second)
-                
             case .palindrome:
                 consoleIO.getOutput(message:Messages.typeFirstPalindrome.rawValue)
                 if consoleIO.getInput().count > 0{
