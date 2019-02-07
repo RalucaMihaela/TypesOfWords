@@ -10,8 +10,8 @@ import Foundation
 
 class WordParse {
     
-    func wordVerify(word: Int, numberOfArguments: Int) -> Bool {
-        return word == numberOfArguments ? true : false
+    func wordVerify(argsCount: Int, numberOfArguments: Int) -> Bool {
+        return argsCount == numberOfArguments ? true : false
     }
     
 }
