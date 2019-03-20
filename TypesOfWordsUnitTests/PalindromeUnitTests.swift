@@ -19,7 +19,7 @@ class PalindromeUnitTests: XCTestCase {
     }
     
     func isNotAnagramTest(){
-        let word = "restful"
+        let word = "ana"
         let sut = Palindrome()
         
         let result = sut.isPalindrome(firstWord: word)

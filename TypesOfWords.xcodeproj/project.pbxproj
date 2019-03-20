@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170F1DED2214208E00036E6C /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F1DEC2214208E00036E6C /* UnitTests.swift */; };
+		170F1DF32214210D00036E6C /* PalindromeUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F1DF22214210D00036E6C /* PalindromeUnitTests.swift */; };
+		170F1DF42214215200036E6C /* Palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6BFF220252D0004BB0F1 /* Palindrome.swift */; };
+		170F1DF5221421ED00036E6C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE67FE21EE97B400285F85 /* StringExtension.swift */; };
+		170F1DF7221425A300036E6C /* InputStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F1DF6221425A300036E6C /* InputStrategyProtocol.swift */; };
+		1778C84B2239AB92002F5617 /* OutputStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778C84A2239AB92002F5617 /* OutputStrategyProtocol.swift */; };
 		17FC6BFE220252C2004BB0F1 /* Anagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6BFD220252C2004BB0F1 /* Anagram.swift */; };
 		17FC6C00220252D0004BB0F1 /* Palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6BFF220252D0004BB0F1 /* Palindrome.swift */; };
 		17FC6C0422025B98004BB0F1 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6C0322025B98004BB0F1 /* Messages.swift */; };
@@ -20,11 +26,8 @@
 		17FF0CB6220BA33F000A1C85 /* Anagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6BFD220252C2004BB0F1 /* Anagram.swift */; };
 		17FF0CB7220BA3CB000A1C85 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE67FE21EE97B400285F85 /* StringExtension.swift */; };
 		17FF0CB9220BA401000A1C85 /* PalindromeUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF0CB8220BA401000A1C85 /* PalindromeUnitTests.swift */; };
-		17FF0CBA220BA429000A1C85 /* Palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC6BFF220252D0004BB0F1 /* Palindrome.swift */; };
 		17FF0CBC220BA49B000A1C85 /* WordParseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF0CBB220BA49B000A1C85 /* WordParseUnitTests.swift */; };
 		17FF0CBD220BA4D3000A1C85 /* WordParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF7E7D220B630400602A08 /* WordParse.swift */; };
-		17FF7E7A220B5B4D00602A08 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF7E79220B5B4D00602A08 /* Output.swift */; };
-		17FF7E7C220B61AE00602A08 /* Read.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF7E7B220B61AE00602A08 /* Read.swift */; };
 		17FF7E7E220B630400602A08 /* WordParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF7E7D220B630400602A08 /* WordParse.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		170F1DEA2214208E00036E6C /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		170F1DEC2214208E00036E6C /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
+		170F1DEE2214208E00036E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170F1DF22214210D00036E6C /* PalindromeUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromeUnitTests.swift; sourceTree = "<group>"; };
+		170F1DF6221425A300036E6C /* InputStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStrategyProtocol.swift; sourceTree = "<group>"; };
+		1778C84A2239AB92002F5617 /* OutputStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputStrategyProtocol.swift; sourceTree = "<group>"; };
 		17FC6BFD220252C2004BB0F1 /* Anagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anagram.swift; sourceTree = "<group>"; };
 		17FC6BFF220252D0004BB0F1 /* Palindrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palindrome.swift; sourceTree = "<group>"; };
 		17FC6C0322025B98004BB0F1 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
@@ -56,12 +65,17 @@
 		17FF0CB2220BA209000A1C85 /* AnagramUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramUnitTests.swift; sourceTree = "<group>"; };
 		17FF0CB8220BA401000A1C85 /* PalindromeUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromeUnitTests.swift; sourceTree = "<group>"; };
 		17FF0CBB220BA49B000A1C85 /* WordParseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordParseUnitTests.swift; sourceTree = "<group>"; };
-		17FF7E79220B5B4D00602A08 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
-		17FF7E7B220B61AE00602A08 /* Read.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Read.swift; sourceTree = "<group>"; };
 		17FF7E7D220B630400602A08 /* WordParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordParse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		170F1DE72214208E00036E6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17FE67ED21EE925200285F85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170F1DEB2214208E00036E6C /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				170F1DEC2214208E00036E6C /* UnitTests.swift */,
+				170F1DEE2214208E00036E6C /* Info.plist */,
+				170F1DF22214210D00036E6C /* PalindromeUnitTests.swift */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
 		17FC6BFB2202528E004BB0F1 /* WordType */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,10 +115,10 @@
 		17FC6C0122025B69004BB0F1 /* IOHandling */ = {
 			isa = PBXGroup;
 			children = (
-				17FF7E79220B5B4D00602A08 /* Output.swift */,
 				17FE67FA21EE947B00285F85 /* ConsoleIO.swift */,
 				17FC6C0322025B98004BB0F1 /* Messages.swift */,
-				17FF7E7B220B61AE00602A08 /* Read.swift */,
+				170F1DF6221425A300036E6C /* InputStrategyProtocol.swift */,
+				1778C84A2239AB92002F5617 /* OutputStrategyProtocol.swift */,
 			);
 			path = IOHandling;
 			sourceTree = "<group>";
@@ -114,6 +138,7 @@
 			children = (
 				17FE67F221EE925200285F85 /* TypesOfWords */,
 				17FF0CAB220BA106000A1C85 /* TypesOfWordsUnitTests */,
+				170F1DEB2214208E00036E6C /* UnitTests */,
 				17FE67F121EE925200285F85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +148,7 @@
 			children = (
 				17FE67F021EE925200285F85 /* TypesOfWords */,
 				17FF0CAA220BA106000A1C85 /* TypesOfWordsUnitTests.xctest */,
+				170F1DEA2214208E00036E6C /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +180,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		170F1DE92214208E00036E6C /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170F1DF12214208E00036E6C /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				170F1DE62214208E00036E6C /* Sources */,
+				170F1DE72214208E00036E6C /* Frameworks */,
+				170F1DE82214208E00036E6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 170F1DEA2214208E00036E6C /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		17FE67EF21EE925200285F85 /* TypesOfWords */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17FE67F721EE925200285F85 /* Build configuration list for PBXNativeTarget "TypesOfWords" */;
@@ -198,6 +241,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Raluca Ionescu";
 				TargetAttributes = {
+					170F1DE92214208E00036E6C = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					17FE67EF21EE925200285F85 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -220,11 +266,19 @@
 			targets = (
 				17FE67EF21EE925200285F85 /* TypesOfWords */,
 				17FF0CA9220BA106000A1C85 /* TypesOfWordsUnitTests */,
+				170F1DE92214208E00036E6C /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		170F1DE82214208E00036E6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17FF0CA8220BA106000A1C85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,15 +289,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		170F1DE62214208E00036E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170F1DF5221421ED00036E6C /* StringExtension.swift in Sources */,
+				170F1DF32214210D00036E6C /* PalindromeUnitTests.swift in Sources */,
+				170F1DF42214215200036E6C /* Palindrome.swift in Sources */,
+				170F1DED2214208E00036E6C /* UnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17FE67EC21EE925200285F85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17FF7E7A220B5B4D00602A08 /* Output.swift in Sources */,
+				170F1DF7221425A300036E6C /* InputStrategyProtocol.swift in Sources */,
 				17FC6BFE220252C2004BB0F1 /* Anagram.swift in Sources */,
 				17FE67FF21EE97B400285F85 /* StringExtension.swift in Sources */,
-				17FF7E7C220B61AE00602A08 /* Read.swift in Sources */,
 				17FE67F421EE925200285F85 /* main.swift in Sources */,
+				1778C84B2239AB92002F5617 /* OutputStrategyProtocol.swift in Sources */,
 				17FE67FB21EE947B00285F85 /* ConsoleIO.swift in Sources */,
 				17FC6C00220252D0004BB0F1 /* Palindrome.swift in Sources */,
 				17FC6C0422025B98004BB0F1 /* Messages.swift in Sources */,
@@ -263,7 +328,6 @@
 				17FF0CAD220BA106000A1C85 /* TypesOfWordsUnitTests.swift in Sources */,
 				17FF0CBC220BA49B000A1C85 /* WordParseUnitTests.swift in Sources */,
 				17FF0CB9220BA401000A1C85 /* PalindromeUnitTests.swift in Sources */,
-				17FF0CBA220BA429000A1C85 /* Palindrome.swift in Sources */,
 				17FF0CB3220BA209000A1C85 /* AnagramUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +335,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		170F1DEF2214208E00036E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DX5UT42TSL;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvos.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		170F1DF02214208E00036E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DX5UT42TSL;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvos.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		17FE67F521EE925200285F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -445,6 +545,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		170F1DF12214208E00036E6C /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170F1DEF2214208E00036E6C /* Debug */,
+				170F1DF02214208E00036E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		17FE67EB21EE925200285F85 /* Build configuration list for PBXProject "TypesOfWords" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
