@@ -9,7 +9,6 @@
 import Foundation
 
 let panagram = Panagram()
-
 panagram.start()
 
 

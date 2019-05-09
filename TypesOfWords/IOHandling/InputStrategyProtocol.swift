@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias InputDictionary = (optionType: String, word: String)
+typealias InputDictionary = (optionType: OptionType, word: String)
 
 protocol InputStrategyProtocol {
     func read(args argument: [String]?) -> [InputDictionary]
@@ -16,7 +16,6 @@ protocol InputStrategyProtocol {
 
 class StaticInputStrategy : InputStrategyProtocol {
     func read(args: [String]?) -> [InputDictionary] {
-        //wordVerify
         return []
     }
 }
@@ -32,24 +31,37 @@ class InteractiveInputStrategy : InputStrategyProtocol {
         
         for item in input {
             let line = self.substring(value: item)
-            if line.secondWord.count > 0 {
-                readDictionary.append(InputDictionary(optionType:line.optionType, word: line.firstWord))
-                readDictionary.append(InputDictionary(optionType:line.optionType, word: line.secondWord))
-            } else {
-                readDictionary.append(InputDictionary(optionType:line.optionType, word: line.firstWord))
+            if let secondWord = line.secondWord {
+                if secondWord.count > 0 {
+                    readDictionary.append(InputDictionary(optionType:OptionType(value: line.optionType), word: line.firstWord))
+                    readDictionary.append(InputDictionary(optionType:OptionType(value: line.optionType), word: secondWord))
+                } else {
+                    readDictionary.append(InputDictionary(optionType:OptionType(value: line.optionType), word: line.firstWord))
+                }
             }
+            
         }
         
         return readDictionary
     }
     
-    private func substring(value: String) -> (optionType:String, firstWord:String, secondWord:String){
+    private func substring(value: String) -> (optionType:String, firstWord:String, secondWord:String?){
         let delimiter = " "
         let stringArray = value.components(separatedBy: delimiter)
-        return (optionType: stringArray[0], firstWord: stringArray[1], secondWord: stringArray[2])
+        return (optionType: stringArray[0], firstWord: stringArray[1], secondWord: stringArray.count > 2 ? stringArray[2] : "")
     }
     
     func getOption(_ option: String) -> (option:OptionType, value: String) {
         return (OptionType(value: option), option)
+    }
+
+}
+
+extension InputStrategyProtocol {
+    func getInput() -> String {
+        let keyboard = FileHandle.standardInput
+        let inputData = keyboard.availableData
+        let strData = String(data: inputData, encoding: String.Encoding.utf8)!
+        return strData.trimmingCharacters(in: CharacterSet.newlines)
     }
 }
